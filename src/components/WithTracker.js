@@ -1,3 +1,5 @@
+// https://github.com/react-ga/react-ga/wiki/React-Router-v4-withTracker
+
 import React, { Component, } from "react";
 import GoogleAnalytics from "react-ga";
 

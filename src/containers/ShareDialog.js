@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -12,17 +12,13 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 // SNS用シェアボタン
 import {
   FacebookShareButton,
-  // GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   EmailShareButton,
-  TumblrShareButton,
 
   FacebookIcon,
   TwitterIcon,
-  // GooglePlusIcon,
   LinkedinIcon,
-  TumblrIcon,
   EmailIcon,
 } from 'react-share';
 
@@ -52,7 +48,7 @@ const styles = theme => ({
 });
 
 
-class ShareDialog extends Component {
+class ShareDialog extends React.Component {
 
   render() {
 
@@ -63,8 +59,8 @@ class ShareDialog extends Component {
     const { classes } = this.props;
     
     // シェアボタン用
-    const shareUrl = "https://animel.f-arts.work";
-    const title = "Animel | アニメなにみる？";
+    const shareUrl = "https://";
+    const title = "Logpose -man to man tourism curation dApp-";
     
     return (
       <Dialog
@@ -74,7 +70,7 @@ class ShareDialog extends Component {
         aria-describedby="alert-dialog-description"
         className={classes.root}
       >
-        <DialogTitle>Animelをシェアする</DialogTitle>
+        <DialogTitle>Logposeをシェアする</DialogTitle>
         <Divider/>
         <DialogContent className={classes.snsShareButtonArea}>
           <FacebookShareButton
@@ -93,13 +89,6 @@ class ShareDialog extends Component {
               size={48}
               round />
           </TwitterShareButton>
-          {/* <GooglePlusShareButton
-            url={shareUrl}
-            className={classes.snsShareButton}>
-            <GooglePlusIcon
-              size={48}
-              round />
-          </GooglePlusShareButton> */}
         </DialogContent>
         <DialogContent className={classes.snsShareButtonArea}>
           <LinkedinShareButton
@@ -112,16 +101,6 @@ class ShareDialog extends Component {
               size={48}
               round />
           </LinkedinShareButton>
-          <TumblrShareButton
-            url={shareUrl}
-            title={title}
-            windowWidth={660}
-            windowHeight={460}
-            className={classes.snsShareButton}>
-            <TumblrIcon
-              size={48}
-              round />
-          </TumblrShareButton>
           <EmailShareButton
             url={shareUrl}
             subject={title}

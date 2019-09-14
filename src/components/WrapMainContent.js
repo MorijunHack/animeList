@@ -1,47 +1,50 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-// スクロールバー
+// スクロールバー設定
 import { Scrollbars } from 'react-custom-scrollbars';
 
-// GoogleAnalysis
-import WithTracker from '../components/WithTracker';
-
-// CoocleAnalysis
-import AdSense from 'react-adsense';
+// Google Analystics関連
+import WithTracker from '../components/WithTracker'
 
 // スタイル
 const styles = theme => ({
-    wrapper: {
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100%'
-    },
-    footer: {
-        marginTop: 'auto'
-    }
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100%',
+  },
+  footer: {
+    marginTop: 'auto',
+  },
 });
 
 const WrapMainContent = (WrappedComponent, options = {}) => {
-    const HOC = class extends Component {
-        render(){
-            const { classes, ...other_props} = this.props;
+
+  const HOC = class extends Component {
+    
+    render() {
+    
+      // Material-ui関連
+      const { classes, ...other_props } = this.props;
+    
+      return (
+        <Scrollbars>
+          
+          {/* classNameでwrapperとfooterを指定することで、footer（今回はAdsense）をページ下部に貼り付けることが出来る（見た目用途） */}
+          <div className={classes.wrapper}>
+          
+          
+            <WrappedComponent {...other_props} />
             
-            return (
-                <Scrollbars>
-                    <div className={classes.wrapper}>
-                        <WrappedComponent {...other_props} />
 
-                        <div className={classes.footer}>
-                            <AdSense.Google client='ca-pub-3774224802378126' slot='5432750074' style={{display: 'block'}} format='auto' responsive='true' />
-                        </div>
-                    </div>
-                </Scrollbars>
-            );
-        }
-    };
+          </div>
+        </Scrollbars>
+      );
+    }
+  };
 
-return (
+  return (
     WithTracker( //Google Analystics用Wrapper
       withStyles(styles, { withTheme: true })(HOC)
     )

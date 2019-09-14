@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -37,7 +37,7 @@ const styles = theme => ({
 
 
 
-class RouteRelatedBottomNavigation extends Component {
+class RouteRelatedBottomNavigation extends React.Component {
   buttons_info = [
     { label: 'トップページ', icon: <HomeIcon />, link_to: '/'},
     { label: 'Animelとは', icon: <InfoIcon />, link_to: '/info'},

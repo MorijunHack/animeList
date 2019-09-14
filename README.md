@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Animel is Responsive SPA sample
+Animel is using React, Redux, Material-UI, etc...
 
-## Available Scripts
+Please feel free to use it. DON'T forget to replace 'My profile', 'Google Analystics', 'Adsense' code.
+If you have any idea or betterment, please tell me([@y_kawase](https://twitter.com/y_kawase)).
 
-In the project directory, you can run:
+```bash
+# Create Sample by animel
+git clone https://github.com/ykawase1011/animel.git
+cd animel
+npm install
+npm start
 
-### `npm start`
+# Build Static Pages(/public)
+npm run build
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+スマホ・PCに対応した、シングルページアプリケーション（SPA）です。
+ボタンを押下すると[ShangriLa Anime API](https://qiita.com/AKB428/items/64938febfd4dcf6ea698)を叩いて今期のアニメ情報を取得してきて表示するというシンプルなアプリ。昨今はモバイルファーストの世の中なのでモバイルを意識しつつもPCで表示できるようにレスポンシブなアプリにしています。
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+作り方などは[こちら](https://blog.f-arts.work/archives/791)にまとめておりますのでご参考下さい。
 
-### `npm test`
+## ソフトウェア構成
+```
+react：16.4.2（React）
+react-router：4.3.1（URL遷移本体）
+react-router-dom：4.3.1（URL遷移（Web））
+redux：4.0.0（Redux）
+react-redux：5.0.7（Redux × React）
+redux-thunk：2.3.（Redux × API）
+material-ui：1.5.1（マテリアルデザインの見た目に）
+axios：0.18.0（API叩く）
+react-copy-to-clipboard：5.0.1（クリップボードにコピー）
+react-custom-scrollbars：4.2.1（ネイティブっぽいスクロールバー）
+react-share：2.3.1（SNSシェアボタン）
+react-ga：2.5.3（Google Analystics）
+react-adsense：0.0.6（Google Adsense）
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## コードの取扱について
+煮るなり焼くなり好きにして。保証はしません。
 
-### `npm run build`
+ただ私のプロフィール・GoogleAnalysticsコード・Adsense等は置き換えたりして下さい。
+改善案とかリファクタリングとかしてくれたらissueとかプルリクとか投げてくれてもいいけどリプなどで是非教えて欲しい…
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[@y_kawase](https://twitter.com/y_kawase)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+# License
+MIT License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2018 Yuji Kawase
