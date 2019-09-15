@@ -5,7 +5,6 @@ import App from './App';
 
 // Material-UI
 import { createMuiTheme, MuiThemeProvider  } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
 import blue from '@material-ui/core/colors/blue';
 
 // Redux関連
@@ -18,6 +17,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // Redux-Thunk関連（非同期データ取得用）
 import thunk from 'redux-thunk'
+import { light } from '@material-ui/core/styles/createPalette';
+import { blueGrey } from '@material-ui/core/colors';
 
 
 // Redux設定
@@ -34,7 +35,7 @@ const store = createStore(
 const theme = createMuiTheme({
   palette: {
     type: 'light', // light or dark
-    primary: red, // primaryのカラー
+    primary: blueGrey, // primaryのカラー
     secondary: blue, // secondaryのカラー
   },
 });

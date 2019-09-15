@@ -23,7 +23,7 @@ import AnimeList from '../containers/AnimeList';
 const styles = theme => ({
   titleImage: {
     width: '100%',
-    maxWidth: 700,
+    maxWidth: 400,
   },
   
   button: {
@@ -91,7 +91,7 @@ class Home extends React.Component {
 
     return (
       <div>
-        <img src="/images/title.png" alt="title" className={classes.titleImage}/>
+        <img src="/images/Logpose_blueTitle.png" alt="title" className={classes.titleImage} />
         <form autoComplete="off">
           <FormControl className={classes.formControl}>
             <InputLabel shrink htmlFor="year-helper">西暦</InputLabel>

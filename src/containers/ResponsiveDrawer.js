@@ -17,6 +17,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
 import ShareIcon from '@material-ui/icons/Share';
+import SendIcon from '@material-ui/icons/Send';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 
 // Route関連
@@ -121,7 +124,7 @@ class ResponsiveDrawer extends React.Component {
             to="/info"
             onClick={this.closeDrawerNav}
             icon={<InfoIcon />}
-            text="Animelとは"
+            text="about Logpose"
           />
         </List>
         <Divider />
@@ -130,14 +133,27 @@ class ResponsiveDrawer extends React.Component {
             to="/"
             onClick={this.closeDrawerNav}
             icon={<HomeIcon />}
-            text="トップページ"
+            text="Home"
           />
           <ResponsiveDrawerListItem
-            to="/settings"
+            to="/mypage"
             onClick={this.closeDrawerNav}
-            icon={<SettingsIcon />}
-            text="設定"
+            icon={<AccountCircleIcon />}
+            text="MyPage"
           />
+          <ResponsiveDrawerListItem
+            to="/create-room"
+            onClick={this.closeDrawerNav}
+            icon={<AddCircleIcon />}
+            text="Create Room"
+          />
+          <ResponsiveDrawerListItem
+            to="/proposal"
+            onClick={this.closeDrawerNav}
+            icon={<SendIcon />}
+            text="Create Room"
+          />
+
         </List>
       </div>
     );
@@ -156,7 +172,7 @@ class ResponsiveDrawer extends React.Component {
             </IconButton>
             <Link to="/">
               <Typography variant="title" color="inherit" noWrap>
-                <img src="/images/logo_animel_white.png" alt="logo_animel_white" className={classes.headerLogo}/>
+                <img src="/images/Logpose_whiteTop.png" alt="logo_animel_white" className={classes.headerLogo}/>
               </Typography>
             </Link>
             <IconButton

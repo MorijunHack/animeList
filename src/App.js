@@ -6,7 +6,11 @@ import RouteRelatedBottomNavigation from './containers/RouteRelatedBottomNavigat
 import Notification from './containers/Notification';
 import Home from './containers/Home';
 import Info from './containers/Info';
-import Settings from './containers/Settings';
+import MyPage from './containers/MyPage';
+import RoomCreate from './containers/RoomCreate';
+import RoomEdit from './containers/RoomEdit';
+import ProposalCreate from './containers/ProposalCreate';
+
 
 // コンポーネント読み込み
 import WrapMainContent from './components/WrapMainContent'
@@ -35,7 +39,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={WrapMainContent(Home)} />
             <Route exact path="/info" component={WrapMainContent(Info)}/>
-            <Route exact path="/settings" component={WrapMainContent(Settings)}/>
+            <Route exact path="/settings" component={WrapMainContent(MyPage)}/>
+            <Route exact path="/settings" component={WrapMainContent(RoomCreate)}/>
+            <Route exact path="/settings" component={WrapMainContent(RoomEdit)}/>
+            <Route exact path="/settings" component={WrapMainContent(ProposalCreate)}/>
             <Route component={WrapMainContent(NotFound)}/>
           </Switch>
         </ResponsiveDrawer>
