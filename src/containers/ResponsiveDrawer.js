@@ -172,7 +172,7 @@ class ResponsiveDrawer extends React.Component {
             </IconButton>
             <Link to="/">
               <Typography variant="title" color="inherit" noWrap>
-                <img src="/images/Logpose_whiteTop.png" alt="logo_animel_white" className={classes.headerLogo}/>
+                <img src="/images/Logpose_whiteLogo.png" alt="logo_animel_white" className={classes.headerLogo}/>
               </Typography>
             </Link>
             <IconButton
